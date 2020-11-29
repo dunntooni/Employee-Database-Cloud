@@ -33,20 +33,36 @@ def displayEmployees(db):
 
 
 def editEmployee(db):
-    employeeName = input("Please enter the employee's full name: ")
-    employeeUsername = input("Input a username for the new employee: ")
-    employeeExperience = input("Please enter the employee's previous experience (Degree, Previous work, etc): ")
-    employeeState = input("Enter the employee's home state code (ex. ID, AL, GA, etc.): ")
-    data = {
-       'name': employeeName,
-       'experience': employeeExperience,
-       'state': employeeState
-    }
-    db.collection(u'employees').document(employeeUsername).set(data)
+   print("Please note that if the username of the employee matches an existing username,")
+   print("that user's information will be overwritten.")
+   print("Otherwise, a new user will be created.")
+   print("")
+   employeeName = input("Please enter the employee's full name: ")
+   employeeUsername = input("Input a username for the new employee: ")
+   employeeExperience = input("Please enter the employee's previous experience (Degree, Previous work, etc): ")
+   employeeState = input("Enter the employee's home state code (ex. ID, AL, GA, etc.): ")
+   data = {
+      'name': employeeName,
+      'experience': employeeExperience,
+      'state': employeeState
+   }
+   db.collection(u'employees').document(employeeUsername).set(data)
 
 
 def editPosition(db):
-   print("Add Position")
+   print("Please note that if the name of the position exactly matches the name")
+   print("of an existing position, that position's information will be overwritten.")
+   print("Otherwise, a new position will be created.")
+   print("")
+   positionName = input("Please enter the name of the position: ")
+   positionPay = float(input("Please input the amount of pay this position gives: "))
+   manager = input("Please input the position manager: ")
+   data = {
+      'title': positionName,
+      'pay': positionPay,
+      'manager': manager
+   }
+   db.collection(u'positions').document(positionName).set(data)
 
 def deleteEmployee():
    print("Delete Employee")

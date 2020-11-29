@@ -64,11 +64,16 @@ def editPosition(db):
    }
    db.collection(u'positions').document(positionName).set(data)
 
-def deleteEmployee():
-   print("Delete Employee")
+# Prompts the user for an employee username to delete and deletes them. 
+def deleteEmployee(db):
+   username = input("Please enter the username of the employee to be deleted: ")
+   db.collection(u'employees').document(username).delete()
+   print("User Deleted.")
 
-def deletePosition():
-   print("Delete Position")
+def deletePosition(db):
+   positionName = input("Please enter the name of the position to be deleted (Case Sensitive): ")
+   db.collection(u'positions').document(positionName).delete()
+   print("Position Deleted.")
 
 def main():
    db = initialize_firestore()
@@ -99,10 +104,10 @@ def main():
          displayPositions(db)
          print("")
       elif userSelect == "5":
-         deleteEmployee()
+         deleteEmployee(db)
          print("")
       elif userSelect == "6":
-         deletePosition()
+         deletePosition(db)
          print("")
    print("See ya.")
 

@@ -16,10 +16,11 @@ To run: `python main.py`
 ![Employee being added](images/addEmployee.png)
 <br><b>Adding a Position:</b><br>
 ![Position being added](images/addPosition.png)
-<br><b>Deleting/Displaying a Position:</b><br>
-![Position being deleted](images/deletePosition_displayPosition.png)
-<br><b>Editing an Employee:</b><br>
-![Editing an employee](images/editEmployee.png)
+<br><b>Deleting/Displaying an Employee:</b><br>
+![Employee being deleted](images/deleteEmployee.png)
+<br><b>The firestore collections:</b><br>
+![Firestore Collections](images/firebaseCollection.png)
+
 
 # Useful Websites
 
@@ -27,4 +28,4 @@ To run: `python main.py`
 1. [Python Reference](https://docs.python.org/3/genindex-I.html)
 2. [Stack Overflow Python Questions](https://stackoverflow.com/questions/tagged/python)
 3. [W3Schools Python Tutorial](https://www.w3schools.com/python/)
-4. [W3Schools SQL Tutorial](https://www.w3schools.com/sql/)
+4. [Google Firebase Documents](https://firebase.google.com/docs/guides?authuser=0)
